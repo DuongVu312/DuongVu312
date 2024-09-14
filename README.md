@@ -1,4 +1,4 @@
-# HCL-Tech-CapStone-Project
+# HCL Tech CapStone Project
 This Repo is my Capstone Project about CAN Protocol on STM32F405 custom board with 10 different levels
 
 ## Details about levels
