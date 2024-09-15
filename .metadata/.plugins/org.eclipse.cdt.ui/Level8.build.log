@@ -1,0 +1,85 @@
+22:30:31 **** Incremental Build of configuration Debug for project Level8 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:187:19: warning: pointer targets in passing argument 1 of 'display' differ in signedness [-Wpointer-sign]
+  187 |           display("SB YES");
+      |                   ^~~~~~~~
+      |                   |
+      |                   char *
+../Core/Src/main.c:72:29: note: expected 'unsigned char *' but argument is of type 'char *'
+   72 | void display(unsigned char *ptr);
+      |              ~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:192:19: warning: pointer targets in passing argument 1 of 'display' differ in signedness [-Wpointer-sign]
+  192 |           display("SB NO");
+      |                   ^~~~~~~
+      |                   |
+      |                   char *
+../Core/Src/main.c:72:29: note: expected 'unsigned char *' but argument is of type 'char *'
+   72 | void display(unsigned char *ptr);
+      |              ~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:199:19: warning: pointer targets in passing argument 1 of 'display' differ in signedness [-Wpointer-sign]
+  199 |           display("ENG ON");
+      |                   ^~~~~~~~
+      |                   |
+      |                   char *
+../Core/Src/main.c:72:29: note: expected 'unsigned char *' but argument is of type 'char *'
+   72 | void display(unsigned char *ptr);
+      |              ~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:201:19: warning: pointer targets in passing argument 1 of 'display' differ in signedness [-Wpointer-sign]
+  201 |           display("SPEED");
+      |                   ^~~~~~~
+      |                   |
+      |                   char *
+../Core/Src/main.c:72:29: note: expected 'unsigned char *' but argument is of type 'char *'
+   72 | void display(unsigned char *ptr);
+      |              ~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:205:19: warning: pointer targets in passing argument 1 of 'display' differ in signedness [-Wpointer-sign]
+  205 |           display("AB");
+      |                   ^~~~
+      |                   |
+      |                   char *
+../Core/Src/main.c:72:29: note: expected 'unsigned char *' but argument is of type 'char *'
+   72 | void display(unsigned char *ptr);
+      |              ~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:214:124: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  214 |           else if((received_data[3] == 1) || (received_data[3] == 0) && (received_data[0] == 1) && (received_data[1] == 1) && (received_data[2] >= 60))
+      |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:222:19: warning: pointer targets in passing argument 1 of 'display' differ in signedness [-Wpointer-sign]
+  222 |           display("ENG OFF");
+      |                   ^~~~~~~~~
+      |                   |
+      |                   char *
+../Core/Src/main.c:72:29: note: expected 'unsigned char *' but argument is of type 'char *'
+   72 | void display(unsigned char *ptr);
+      |              ~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:224:19: warning: pointer targets in passing argument 1 of 'display' differ in signedness [-Wpointer-sign]
+  224 |           display("SPEED");
+      |                   ^~~~~~~
+      |                   |
+      |                   char *
+../Core/Src/main.c:72:29: note: expected 'unsigned char *' but argument is of type 'char *'
+   72 | void display(unsigned char *ptr);
+      |              ~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:228:19: warning: pointer targets in passing argument 1 of 'display' differ in signedness [-Wpointer-sign]
+  228 |           display("AB");
+      |                   ^~~~
+      |                   |
+      |                   char *
+../Core/Src/main.c:72:29: note: expected 'unsigned char *' but argument is of type 'char *'
+   72 | void display(unsigned char *ptr);
+      |              ~~~~~~~~~~~~~~~^~~
+arm-none-eabi-gcc -o "Level8.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\1. HCLTech\Capstone Project\Level8\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Level8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Level8.elf
+ 
+arm-none-eabi-size  Level8.elf 
+arm-none-eabi-objdump -h -S Level8.elf  > "Level8.list"
+   text	   data	    bss	    dec	    hex	filename
+  13764	     28	   1924	  15716	   3d64	Level8.elf
+Finished building: default.size.stdout
+ 
+Finished building: Level8.list
+ 
+
+22:30:32 Build Finished. 0 errors, 9 warnings. (took 597ms)
+
